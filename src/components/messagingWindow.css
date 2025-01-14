@@ -1,19 +1,20 @@
 .messagingWindow {
-    z-index: 9999999999;
-    background-color: white;
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.08);
-    border-radius: 15px;
-    max-width: 550px;
-    margin: 0 auto;
-    border: 1px solid #ddd;
     /* position: fixed; */
-    width: 550px;
-    height: 600px;
-    display: inline-block;
+    width: 460px;/* Ajustar según el tamaño real de la pantalla del iPhone en tu imagen */
+    height: 920px;/* Ajustar según el tamaño real de la pantalla del iPhone en tu imagen */
     bottom: 50px;
     right: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: transparent;/* Fondo transparente para no interferir con el frame */
+    background-image: url('./IphoneFrame.png');/* Asegúrate que la ruta sea correcta */
+    background-size: cover;/* Cubre todo el div sin distorsionar las proporciones */
+    background-position: center;/* Centra la imagen en el div */
+    z-index: 1000;/* Alta prioridad en la pila de visualización */
+    padding-top: 0px; /* Añade un espacio en la parte superior para evitar el notch */
+    padding-right: 2px;/* Añade padding a la derecha para centrar el contenido */
+    padding-left: 2px; /* Añade padding a la izquierda para mantener la simetría */
 }
-
 .messagingWindow[class~="hide"] {
     display: none;
 }

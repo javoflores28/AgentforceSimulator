@@ -1,23 +1,28 @@
 .messagingBody {
-    height: 500px;
-    border-bottom: 1px solid #ddd;
+    width: 400px; /* Ajustar según el tamaño real de la pantalla del iPhone en tu imagen */
+    height: 674px; /* Ajustar según el tamaño real de la pantalla del iPhone en tu imagen */
+    border-bottom: 0px solid #ddd;
     overflow: auto;
-    background: whitesmoke;
+    /* padding-top: 65px;  Añade un espacio en la parte superior para evitar el notch */
+    padding-right: 15px; /* Añade padding a la derecha para centrar el contenido */
+    padding-left: 20px;/* Añade padding a la izquierda para mantener la simetría */
+    background: transparent;
     border-radius: inherit;
     font-family: inherit;
+    margin: auto;
+    display: block;
+    left: 50%;
+    /* transform: translateX(-50%);  Centra el div en la pantalla */
 }
 
-.conversationStartTimeText, .conversationEndTimeText {
-    color: rgb(98 91 91);
-    margin-top: 10px;
-    font-size: 12px;
-    font-weight: bold;
-    text-align: center;
-}
 
 .conversationEntriesListView {
     height: auto;
     padding: 5px 10px;
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.textMessageBubbleContainer {
+    text-align: left;
 }

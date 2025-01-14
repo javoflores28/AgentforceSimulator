@@ -7,6 +7,7 @@
   pointer-events: none;
   position: absolute;
   top: 25px;
+  opacity: 0; /* Hace el logo completamente transparente */
 }
 
 /* @media (prefers-reduced-motion: no-preference) {
@@ -16,7 +17,7 @@
 } */
 
 .App-header {
-  background-color: #282c34;
+  /*background-color: #282c34;*/
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,6 +25,9 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background-image: url('./ImageBackground.png');/* Asegúrate de usar la ruta correcta */
+  background-size: cover; /* Cubre el área del header completamente */
+  background-position: center; /* Centra la imagen en el header */
 }
 
 .App-link {

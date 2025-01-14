@@ -29,20 +29,6 @@ export default function MessagingBody({ conversationEntries, conversationStatus,
             conversationEntry={conversationEntry} />
     );
 
-    /**
-     * Generates a text with conversation start date and time.
-     * @returns {string}
-     */
-    function generateConversationStartTimeText() {
-        if (conversationEntries.length) {
-            const conversationStartTimestamp = conversationEntries[0].transcriptedTimestamp;
-            const startDate = util.getFormattedDate(conversationStartTimestamp);
-            const startTime = util.getFormattedTime(conversationStartTimestamp);
-            const conversationStartTimeText = `Conversation started: ${startDate} at ${startTime}`;
-            return conversationStartTimeText;
-        }
-        return "";
-    }
 
     /**
      * Generates a text with conversation end date and time.
@@ -59,7 +45,6 @@ export default function MessagingBody({ conversationEntries, conversationStatus,
 
     return (
         <div className="messagingBody">
-            {conversationEntries.length > 0 && <p className="conversationStartTimeText">{generateConversationStartTimeText()}</p>}
             <ul className="conversationEntriesListView">
                 {conversationEntriesListView}
             </ul>

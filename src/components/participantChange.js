@@ -11,7 +11,8 @@ export default function ParticipantChange({conversationEntry}) {
         const participantName = ConversationEntryUtil.getParticipantChangeEventPartcipantName(conversationEntry);
         const hasParticipantJoined = ConversationEntryUtil.hasParticipantJoined(conversationEntry);
         const formattedTime = util.getFormattedTime(conversationEntry.transcriptedTimestamp);
-        const participantChangeText = `${participantName} ${hasParticipantJoined ? `joined` : `left`} at ${formattedTime}`;
+        const participantChangeText = ' Hoy ' ;
+        // const participantChangeText = `${participantName} ${hasParticipantJoined ? `joined` : `left`} at ${formattedTime}`;
 
         return participantChangeText;
     }

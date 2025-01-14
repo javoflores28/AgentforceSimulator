@@ -1,6 +1,7 @@
 import AppLogo from './AppLogo.png'
 import './App.css';
 import BootstrapMessaging from './bootstrapMessaging';
+import ImageBackground from './ImageBackground.png'
 
 function App() {
   return (
