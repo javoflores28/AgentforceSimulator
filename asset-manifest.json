@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/AgentforceSimulator/static/css/main.0c9f7c32.css",
+    "main.js": "/AgentforceSimulator/static/js/main.9d630219.js",
+    "static/js/453.bcce1d62.chunk.js": "/AgentforceSimulator/static/js/453.bcce1d62.chunk.js",
+    "static/media/ImageBackground.png": "/AgentforceSimulator/static/media/ImageBackground.e8d29fdf426eb77182e7.png",
+    "static/media/IphoneFrame.png": "/AgentforceSimulator/static/media/IphoneFrame.8b9d53508628809e9e59.png",
+    "static/media/AppLogo.png": "/AgentforceSimulator/static/media/AppLogo.756605568b186bd69dd0.png",
+    "index.html": "/AgentforceSimulator/index.html",
+    "main.0c9f7c32.css.map": "/AgentforceSimulator/static/css/main.0c9f7c32.css.map",
+    "main.9d630219.js.map": "/AgentforceSimulator/static/js/main.9d630219.js.map",
+    "453.bcce1d62.chunk.js.map": "/AgentforceSimulator/static/js/453.bcce1d62.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0c9f7c32.css",
+    "static/js/main.9d630219.js"
+  ]
+}
