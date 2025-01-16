@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/AgentforceSimulator/static/css/main.da8a643e.css",
-    "main.js": "/AgentforceSimulator/static/js/main.e88cdef1.js",
+    "main.js": "/AgentforceSimulator/static/js/main.e075494a.js",
     "static/js/453.bcce1d62.chunk.js": "/AgentforceSimulator/static/js/453.bcce1d62.chunk.js",
     "static/media/ImageBackground.png": "/AgentforceSimulator/static/media/ImageBackground.90569b621d7080dff879.png",
     "static/media/IphoneFrame.png": "/AgentforceSimulator/static/media/IphoneFrame.8b9d53508628809e9e59.png",
-    "static/media/AppLogo.png": "/AgentforceSimulator/static/media/AppLogo.756605568b186bd69dd0.png",
+    "static/media/AppLogo.png": "/AgentforceSimulator/static/media/AppLogo.eb4c1cfb129ef35ea057.png",
     "index.html": "/AgentforceSimulator/index.html",
     "main.da8a643e.css.map": "/AgentforceSimulator/static/css/main.da8a643e.css.map",
-    "main.e88cdef1.js.map": "/AgentforceSimulator/static/js/main.e88cdef1.js.map",
+    "main.e075494a.js.map": "/AgentforceSimulator/static/js/main.e075494a.js.map",
     "453.bcce1d62.chunk.js.map": "/AgentforceSimulator/static/js/453.bcce1d62.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.da8a643e.css",
-    "static/js/main.e88cdef1.js"
+    "static/js/main.e075494a.js"
   ]
 }
