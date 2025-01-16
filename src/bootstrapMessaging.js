@@ -24,7 +24,7 @@ export default function BootstrapMessaging() {
     let [shouldDisableMessagingButton, setShouldDisableMessagingButton] = useState(false);
     let [shouldShowMessagingWindow, setShouldShowMessagingWindow] = useState(false);
     let [showMessagingButtonSpinner, setShowMessagingButtonSpinner] = useState(false);
-    let [showAnimation, setAnimating] = useState(false);
+    let [showAnimationSpinner, setAnimating] = useState(false);
     let [isExistingConversation, setIsExistingConversation] = useState(false);
 
     useEffect(() => {
@@ -253,7 +253,8 @@ export default function BootstrapMessaging() {
                 <MessagingButton
                     clickHandler={handleMessagingButtonClick}
                     disableButton={shouldDisableMessagingButton}
-                    showSpinner={showMessagingButtonSpinner} />}
+                    showSpinner={showMessagingButtonSpinner}
+                    showAnimation={showAnimationSpinner} />}
             {shouldShowMessagingWindow &&
                 <Draggable intitialPosition={{ x: 1000, y: 500 }}>
                     <MessagingWindow

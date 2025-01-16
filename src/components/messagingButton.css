@@ -83,7 +83,7 @@
 }
 
 .robot-animation {
-    animation: robotFly 4s forwards; /* Define la animación */
+    animation: robotFly 5s forwards; /* Define la animación */
 }
 
 @keyframes robotFly {
