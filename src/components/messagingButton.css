@@ -76,14 +76,14 @@
     bottom: -100%; /* Empieza fuera de la pantalla por debajo */
     right: 50%; /* Centrado horizontalmente al principio */
     transform: translateX(-70%); /* Ajusta la posición inicial horizontalmente */
-    width: 350px; /* Ajusta según el tamaño deseado de la imagen */
+    width: 50px; /* Ajusta según el tamaño deseado de la imagen */
     z-index: 1000; /* Asegúrate de que esté por encima de otros elementos si es necesario */
     transition: opacity 0.5s ease-in-out; /* Suaviza la aparición y desaparición */
     opacity: 0; /* Inicialmente invisible */
 }
 
 .robot-animation {
-    animation: robotFly 5s forwards; /* Define la animación */
+    animation: robotFly 6s forwards; /* Define la animación */
 }
 
 @keyframes robotFly {
