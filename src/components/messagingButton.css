@@ -76,7 +76,7 @@
     bottom: -100%; /* Empieza fuera de la pantalla por debajo */
     right: 50%; /* Centrado horizontalmente al principio */
     transform: translateX(-50%); /* Ajusta la posición inicial horizontalmente */
-    width: 5px; /* Ajusta según el tamaño deseado de la imagen */
+    width: 1px; /* Ajusta según el tamaño deseado de la imagen */
     z-index: 1000000; /* Asegúrate de que esté por encima de otros elementos si es necesario */
     transition: opacity 0.5s ease-in-out; /* Suaviza la aparición y desaparición */
     opacity: 0; /* Inicialmente invisible */
