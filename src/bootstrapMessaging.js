@@ -5,8 +5,10 @@ import { useState, useEffect } from "react";
 // Import children components to render.
 import MessagingWindow from "./components/messagingWindow";
 import MessagingButton from "./components/messagingButton";
+import robotImage from './components/robot.png'; // Asegúrate de que la ruta sea correcta
 
 import './bootstrapMessaging.css';
+
 
 import { storeOrganizationId, storeDeploymentDeveloperName, storeSalesforceMessagingUrl } from './services/dataProvider';
 import { determineStorageType, initializeWebStorage, getItemInWebStorageByKey, getItemInPayloadByKey } from './helpers/webstorageUtils';
@@ -22,6 +24,7 @@ export default function BootstrapMessaging() {
     let [shouldDisableMessagingButton, setShouldDisableMessagingButton] = useState(false);
     let [shouldShowMessagingWindow, setShouldShowMessagingWindow] = useState(false);
     let [showMessagingButtonSpinner, setShowMessagingButtonSpinner] = useState(false);
+    let [showAnimation, setAnimating] = useState(false);
     let [isExistingConversation, setIsExistingConversation] = useState(false);
 
     useEffect(() => {
@@ -178,6 +181,7 @@ export default function BootstrapMessaging() {
     function handleMessagingButtonClick(evt) {
         if (evt) {
             console.log("Messaging Button clicked.");
+            setAnimating(true);
             setShowMessagingButtonSpinner(true);
             showMessagingWindow(true);
         }
@@ -194,6 +198,7 @@ export default function BootstrapMessaging() {
             setShouldDisableMessagingButton(false);
             // Remove the spinner on the Messaging Button.
             setShowMessagingButtonSpinner(false);
+            setAnimating(false);
             // Hide Messaging Button to re-initialize the client with form submit.
             setShowMessagingButton(false);
         }
@@ -212,7 +217,7 @@ export default function BootstrapMessaging() {
 
     return (
         <>
-            <h1>Agentforce WhatsApp Simulator</h1>
+            <h1>Agentforce Whatspp Simulator</h1>
             <div className="deploymentDetailsForm">
                 <h4>Input your Embedded Service (Custom Client) deployment details below</h4>
                 <label>Organization ID</label>
