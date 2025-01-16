@@ -198,7 +198,6 @@ export default function BootstrapMessaging() {
             setShouldDisableMessagingButton(false);
             // Remove the spinner on the Messaging Button.
             setShowMessagingButtonSpinner(false);
-            setAnimating(false);
             // Hide Messaging Button to re-initialize the client with form submit.
             setShowMessagingButton(false);
         }
@@ -213,6 +212,7 @@ export default function BootstrapMessaging() {
         setShouldDisableMessagingButton(isReady);
         // Remove the spinner on the Messaging Button if the app is UI ready.
         setShowMessagingButtonSpinner(!isReady);
+        //setAnimating(!isReady);
     }
 
     return (
