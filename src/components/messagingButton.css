@@ -70,3 +70,41 @@
 		transform: rotate(1turn);
 	}
 }
+
+.robot-image {
+    position: fixed;
+    bottom: -100%;
+    /* Empieza fuera de la pantalla por debajo */
+    right: 50%;
+    /* Centrado horizontalmente al principio */
+    transform: translateX(-50%);
+    /* Ajusta la posición inicial horizontalmente */
+    width: 150px;
+    /* Ajusta según el tamaño deseado de la imagen */
+    z-index: 1000;
+    /* Asegúrate de que esté por encima de otros elementos si es necesario */
+    transition: opacity 0.5s ease-in-out;
+    /* Suaviza la aparición y desaparición */
+    opacity: 0;
+    /* Inicialmente invisible */
+}
+
+.robot-animation {
+    animation: robotFly 4s forwards;
+    /* Define la animación */
+}
+
+@keyframes robotFly {
+    0% {
+        bottom: -100%;
+        /* Empieza fuera de la pantalla */
+        opacity: 0;
+    }
+
+    100% {
+        bottom: 90%;
+        /* Mueve hasta la esquina superior derecha */
+        right: 90%;
+        opacity: 1;
+    }
+}
