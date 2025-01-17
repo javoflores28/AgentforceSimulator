@@ -74,37 +74,49 @@
 .robot-image {
     position: fixed;
     bottom: -100%;
-    /* Empieza fuera de la pantalla por debajo */
+    /* Comienza fuera de pantalla en la parte inferior */
     right: 50%;
-    /* Centrado horizontalmente al principio */
+    /* Comienza en el centro horizontalmente */
     transform: translateX(-50%);
     /* Ajusta la posición inicial horizontalmente */
-    width: 150px;
+    width: 250px;
     /* Ajusta según el tamaño deseado de la imagen */
     z-index: 1000;
     /* Asegúrate de que esté por encima de otros elementos si es necesario */
-    transition: opacity 0.5s ease-in-out;
-    /* Suaviza la aparición y desaparición */
     opacity: 0;
     /* Inicialmente invisible */
+    transition: opacity 0.5s ease-in-out;
+    /* Suaviza la aparición y desaparición */
 }
 
 .robot-animation {
     animation: robotFly 4s forwards;
-    /* Define la animación */
+    /* Aplica la animación */
 }
 
 @keyframes robotFly {
     0% {
         bottom: -100%;
-        /* Empieza fuera de la pantalla */
-        opacity: 0;
+        /* Comienza fuera de pantalla en la parte inferior */
+        opacity: 1;
+        /* Hace visible el robot al comenzar la animación */
+    }
+
+    50% {
+        bottom: 50%;
+        /* Mueve el robot al centro de la pantalla verticalmente */
+        right: 50%;
+        /* Mantiene el robot en el centro horizontalmente */
+        opacity: 1;
+        /* Mantiene visible el robot */
     }
 
     100% {
-        bottom: 90%;
-        /* Mueve hasta la esquina superior derecha */
+        bottom: 100%;
+        /* Mueve el robot hacia la parte superior de la pantalla */
         right: 90%;
-        opacity: 1;
+        /* Desplaza el robot hacia la esquina derecha */
+        opacity: 0;
+        /* Desvanece el robot al final de la animación */
     }
 }
