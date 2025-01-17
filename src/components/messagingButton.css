@@ -105,18 +105,11 @@
     50% {
         bottom: 50%;
         /* Mueve el robot al centro de la pantalla verticalmente */
-        right: 50%;
+        right: 70%;
         /* Mantiene el robot en el centro horizontalmente */
         opacity: 1;
         /* Mantiene visible el robot */
     }
 
-    100% {
-        bottom: 100%;
-        /* Mueve el robot hacia la parte superior de la pantalla */
-        right: 100%;
-        /* Desplaza el robot hacia la esquina derecha */
-        opacity: 1;
-        /* Desvanece el robot al final de la animación */
-    }
+
 }
