@@ -37,7 +37,7 @@ input {
 
 .robot-image {
     position: fixed;
-    bottom: -100%;
+    bottom: -80%;
     /* Empieza fuera de la pantalla por debajo */
     right: 50%;
     /* Centrado horizontalmente al principio */
