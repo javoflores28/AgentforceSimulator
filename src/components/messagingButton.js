@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+/*import React, { useState } from 'react';
 import './messagingButton.css';
 import robotImage from './robot.png'; // Ensure the path to the image is correct
 
@@ -24,13 +24,13 @@ export default function MessagingButton(props) {
       </button>
     </>
   );
-}
+
+}*/
 
 
-
-/*import './messagingButton.css';
+import './messagingButton.css';
 import robotImage from './robot.png'; // Asegúrate de que la ruta sea correcta
-// {props.showSpinner && <span className="messagingButtonLoadingUI loadingBalls"></span>}
+// {props.showAnimation && <img src={robotImage} className="robot-animation" alt="Flying Robot" />}
 export default function MessagingButton(props) {
     
     return (
@@ -40,9 +40,9 @@ export default function MessagingButton(props) {
                 onClick={props.clickHandler}
                 disabled={props.disableButton}>
                     Let's Chat
-                {props.showAnimation && <img src={robotImage} className="robot-animation" alt="Flying Robot" />}
                 
+                {props.showSpinner && <span className="messagingButtonLoadingUI loadingBalls"></span>}
             </button>
         </>
     );
-}*/
+}

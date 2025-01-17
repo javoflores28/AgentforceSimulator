@@ -77,7 +77,7 @@
     /* Comienza fuera de pantalla en la parte inferior */
     right: 50%;
     /* Comienza en el centro horizontalmente */
-    transform: translateY(-50%);
+    transform: translateX(-50%);
     /* Ajusta la posición inicial horizontalmente */
     width: 250px;
     /* Ajusta según el tamaño deseado de la imagen */
