@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 // Import children components to render.
 import MessagingWindow from "./components/messagingWindow";
 import MessagingButton from "./components/messagingButton";
-import robotImage from './components/robot.png'; // Asegúrate de que la ruta sea correcta
+//import robotImage from './components/robot.png'; // Asegúrate de que la ruta sea correcta
 
 import './bootstrapMessaging.css';
 
@@ -24,7 +24,7 @@ export default function BootstrapMessaging() {
     let [shouldDisableMessagingButton, setShouldDisableMessagingButton] = useState(false);
     let [shouldShowMessagingWindow, setShouldShowMessagingWindow] = useState(false);
     let [showMessagingButtonSpinner, setShowMessagingButtonSpinner] = useState(false);
-    let [showAnimationSpinner, setAnimating] = useState(false);
+    //let [showAnimationSpinner, setAnimating] = useState(false);
     let [isExistingConversation, setIsExistingConversation] = useState(false);
 
     useEffect(() => {
@@ -181,7 +181,7 @@ export default function BootstrapMessaging() {
     function handleMessagingButtonClick(evt) {
         if (evt) {
             console.log("Messaging Button clicked.");
-            setAnimating(true);
+            //setAnimating(true);
             setShowMessagingButtonSpinner(true);
             showMessagingWindow(true);
         }
@@ -253,8 +253,9 @@ export default function BootstrapMessaging() {
                 <MessagingButton
                     clickHandler={handleMessagingButtonClick}
                     disableButton={shouldDisableMessagingButton}
-                    showSpinner={showMessagingButtonSpinner}
-                    showAnimation={showAnimationSpinner} />}
+                    //showAnimation={showAnimationSpinner}/>}
+                    showSpinner={showMessagingButtonSpinner} />}
+                    
             {shouldShowMessagingWindow &&
                 <Draggable intitialPosition={{ x: 1000, y: 500 }}>
                     <MessagingWindow
