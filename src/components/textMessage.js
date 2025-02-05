@@ -94,13 +94,24 @@ export default function TextMessage({conversationEntry}) {
     }
 
     return (
-        <>
-            <div className={generateMessageBubbleContainerClassName()}>
-                <div className={generateMessageBubbleClassName()}>
-                    <p className={generateMessageContentClassName()}>{ConversationEntryUtil.getTextMessageContent(conversationEntry)}</p>
-                </div>
-            </div>
-            <p className={generateMessageSenderContentClassName()}>{generateMessageAcknowledgementContentText()}{generateMessageSenderContentText()}</p>
-        </>
-    );
+			<>
+				<div className={generateMessageBubbleContainerClassName()}>
+					<div className={generateMessageBubbleClassName()}>
+						<div
+							className={generateMessageContentClassName()}
+							dangerouslySetInnerHTML={{
+								__html:
+									ConversationEntryUtil.getTextMessageContent(
+										conversationEntry
+									),
+							}}
+						/>
+					</div>
+				</div>
+				<p className={generateMessageSenderContentClassName()}>
+					{generateMessageAcknowledgementContentText()}
+					{generateMessageSenderContentText()}
+				</p>
+			</>
+		);
 }

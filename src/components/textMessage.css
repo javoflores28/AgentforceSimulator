@@ -38,6 +38,7 @@
 }
 
 .textMessageContent {
+    white-space: pre-line;
     color: #111b21;
     margin: 0px;
     font-size: 16px;
