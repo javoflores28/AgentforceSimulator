@@ -1,0 +1,73 @@
+/* choicesMessage.css */
+
+/* Contenedor principal del mensaje con opciones */
+.choicesMessageContainer {
+    overflow: auto;
+    /* Permite que el contenido flote */
+    margin-top: 10px;
+    /* Espacio superior */
+}
+
+/* Burbuja del mensaje principal */
+.choicesMessageBubble {
+    min-width: 50px;
+    /* Ancho mínimo de la burbuja */
+    max-width: 350px;
+    /* Ancho máximo de la burbuja */
+    width: -webkit-fit-content;
+    /* Ajustar el ancho al contenido */
+    background-color: white;
+    /* Color de fondo de la burbuja */
+    border-radius: 20px;
+    /* Bordes redondeados */
+    margin: 1px 0;
+    /* Margen superior e inferior */
+    padding: 8px 14px;
+    /* Espaciado interno */
+    float: left;
+    /* Alinear la burbuja a la izquierda (incoming) */
+}
+
+/* Contenido del mensaje principal (texto) */
+.choicesMessageContent {
+    white-space: pre-line;
+    /* Permite que el texto se ajuste a varias líneas */
+    color: #111b21;
+    /* Color del texto */
+    margin: 0px;
+    /* Sin margen */
+    font-size: 16px;
+    /* Tamaño de la fuente */
+    font-weight: 300;
+    /* Grosor de la fuente */
+}
+
+/* Contenedor de las opciones */
+.optionsContainer {
+    display: flex;
+    /* Mostrar opciones en línea */
+    flex-direction: column;
+    /* Mostrar opciones en columna */
+    gap: 5px;
+    /* Espacio entre opciones */
+    margin-top: 10px;
+    /* Espacio superior para separar las opciones del texto */
+}
+
+/* Botón de opción */
+.optionButton {
+    background-color: #e0e0e0;
+    /* Color de fondo del botón */
+    border: none;
+    /* Sin borde */
+    border-radius: 15px;
+    /* Bordes redondeados */
+    padding: 8px 12px;
+    /* Espaciado interno */
+    cursor: pointer;
+    /* Cambiar el cursor al pasar el ratón */
+    text-align: left;
+    /* Alinear el texto del botón a la izquierda */
+    color: black;
+    /* Color de la letra del botón */
+}

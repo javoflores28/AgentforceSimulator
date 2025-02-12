@@ -54,6 +54,7 @@ export function createConversationEntry(data) {
                 console.warn(`Unexpected and/or unsupported entryType: ${entryPayload.entryType}`);
                 return;
             }
+
     
             return {
                 conversationId: data.conversationId,
