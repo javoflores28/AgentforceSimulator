@@ -373,6 +373,8 @@ export default function Conversation(props) {
             } else {
                 conversationEntry.isEndUserMessage = false;
                 console.log(`Successfully received a message from ${conversationEntry.actorType}`);
+                // Detener el indicador de digitación cuando se recibe un mensaje que no es del usuario final.
+                setIsAnotherParticipantTyping(false);
             }
 
             addConversationEntry(conversationEntry);
@@ -521,6 +523,10 @@ export default function Conversation(props) {
      * @param {object} event - Event data payload from server-sent event.
      */
     function handleTypingStoppedIndicatorServerSentEvent(event) {
+
+        // Esta función ahora está vacía para evitar detener el indicador aquí.
+        console.log("Received typing stopped event, but not handling it to keep the indicator running.");
+        /*
         try {
             // Update in-memory to the latest lastEventId
             if (event && event.lastEventId) {
@@ -541,6 +547,7 @@ export default function Conversation(props) {
         } catch (err) {
             console.error(`Something went wrong in handling typing stopped indicator server sent event: ${err}`);
         }
+        */
     }
 
     /**

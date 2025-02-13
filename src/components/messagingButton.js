@@ -39,8 +39,7 @@ export default function MessagingButton(props) {
                 className="messagingButton"
                 onClick={props.clickHandler}
                 disabled={props.disableButton}>
-                    Let's Chat
-                
+                    Let's Chat           
                 {props.showSpinner && <span className="messagingButtonLoadingUI loadingBalls"></span>}
             </button>
         </>

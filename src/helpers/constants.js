@@ -64,7 +64,7 @@ export const CONVERSATION_CONSTANTS = {
         ACTOR_NAME: "actorName",
         ACTOR_TYPE: "actorType",
         TRANSCRIPTED_TIMESTAMP: "transcriptedTimestamp",
-        MESSAGE_REASON: "messageReason"
+        MESSAGE_REASON: "messageReason",
     },
     /**
      * Types of conversation entries.
@@ -192,5 +192,5 @@ export const DEPLOYMENT_CONFIGURATION_CONSTANTS = {
  * @type {Object}
  */
 export const CLIENT_CONSTANTS = {
-    TYPING_INDICATOR_DISPLAY_TIMEOUT: 5000
+    TYPING_INDICATOR_DISPLAY_TIMEOUT: 60000
 };

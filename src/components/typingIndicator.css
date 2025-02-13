@@ -6,6 +6,8 @@
 .typingIndicatorBubbleContainer {
     padding-right: 10px;
     padding-left: 10px;
+    height: 35px; /*New*/
+    align-self: auto; /*New*/
 } 
 
 .typingIndicatorBubble {
@@ -17,6 +19,10 @@
     border-radius: 20px;
     margin: 1px auto;
     padding: 4px 14px;
+    height: 28px; /*New*/
+    align-items: center; /*New*/
+    display: flex; /*New*/
+    justify-content: center; /*New*/
 }
 
 .typingIndicatorSenderContent {
@@ -33,21 +39,21 @@
     display: inline-flex;
     text-align: center;
     margin: 0px 1.5px;
-    max-width: 100%;
+    max-width: 100%; /*Chance comentar esto*/
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background-color: white;
-    animation-delay: -0.5s;
+    animation-delay: -3.5s; /*New*/
     animation: typingIndicatorAnimation 2.5s infinite ease-in-out;
 }
 
 .second {
-    animation-delay: 3s;
+    animation-delay: 1s;
 }
 
 .third {
-    animation-delay: 4s;
+    animation-delay: 2s;
 }
 
 @keyframes typingIndicatorAnimation {
@@ -63,3 +69,4 @@
         opacity: 1;
     }
 }
+

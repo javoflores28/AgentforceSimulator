@@ -2,6 +2,7 @@ import "./choicesMessage.css";
 import { util } from "../helpers/common";
 import * as ConversationEntryUtil from "../helpers/conversationEntryUtil";
 
+
 export default function ChoicesMessage({ conversationEntry }) {
   const { content } = conversationEntry;
   const { choices } = content;
