@@ -2,9 +2,7 @@ import "./choicesMessage.css";
 import { util } from "../helpers/common";
 import * as ConversationEntryUtil from "../helpers/conversationEntryUtil";
 import { getConversationId } from "../services/dataProvider";
-import {
-	sendTextMessage
-} from "../services/messagingService";
+import { sendTextMessage } from "../services/messagingService";
 
 
 export default function ChoicesMessage({ conversationEntry }) {
