@@ -372,6 +372,28 @@ export default function Conversation(props) {
                 console.log(`End user successfully sent a message.`);
             } else {
                 conversationEntry.isEndUserMessage = false;
+                console.log('Original:');
+                console.log(conversationEntry);
+
+                // Horrible hack
+                // If it starts with a '{' it's a choices message
+                if (conversationEntry.content.staticContent.text.startsWith('{')) {
+
+                    let originalMessage =
+											conversationEntry.content.staticContent.text
+												.replaceAll("\n", "")
+                                                .replace(/(\s+)(?=(?:[^"]*"[^"]*")*[^"]*$)/g, '');
+												//.replace(/\s+/g, "");
+
+                    delete conversationEntry.content.staticContent;
+                    conversationEntry.messageType="ChoicesMessage";
+                    conversationEntry.content.messageType="ChoicesMessage";
+                    conversationEntry.content.choices =
+											JSON.parse(originalMessage).abstractMessage.choices;
+				}
+                console.log('Transformed:');
+                console.log(conversationEntry);
+
                 console.log(`Successfully received a message from ${conversationEntry.actorType}`);
                 // Detener el indicador de digitación cuando se recibe un mensaje que no es del usuario final.
                 setIsAnotherParticipantTyping(false);

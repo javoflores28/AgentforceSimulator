@@ -1,6 +1,10 @@
 import "./choicesMessage.css";
 import { util } from "../helpers/common";
 import * as ConversationEntryUtil from "../helpers/conversationEntryUtil";
+import { getConversationId } from "../services/dataProvider";
+import {
+	sendTextMessage
+} from "../services/messagingService";
 
 
 export default function ChoicesMessage({ conversationEntry }) {
@@ -17,6 +21,29 @@ export default function ChoicesMessage({ conversationEntry }) {
     } else {
       console.log("Opción no encontrada");
     }
+    const conversationId = getConversationId();
+		const messageId = util.generateUUID();
+		const value = selectedOption.titleItem.title;
+		// Optional parameters.
+		let inReplyToMessageId;
+		let isNewMessagingSession;
+		let routingAttributes;
+		let language;
+
+		sendTextMessage(
+				conversationId,
+				value,
+				messageId,
+				inReplyToMessageId,
+				isNewMessagingSession,
+				routingAttributes,
+				language
+			)
+			.then(() => {
+				console.log(
+					`Successfully sent a text message to conversation: ${conversationId}`
+				);
+			});
   };
 
   return (
