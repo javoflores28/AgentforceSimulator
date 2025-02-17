@@ -71,3 +71,14 @@
     color: black;
     /* Color de la letra del botón */
 }
+
+.optionImage {
+    width: 80px;
+    /* Ajusta según tus necesidades */
+    height: 45px;
+    /* Ajusta según tus necesidades */
+    margin-right: 10px;
+    /* Espacio entre la imagen y el texto del botón */
+    border-radius: 20%;
+    /* Opcional: para hacer las imágenes circulares */
+}

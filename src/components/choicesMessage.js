@@ -49,12 +49,15 @@ export default function ChoicesMessage({ conversationEntry }) {
       <div className="choicesMessageBubble">
         <p className="choicesMessageContent">{choices.text}</p>
         <div className="optionsContainer">
-          {choices.optionItems.map((option) => (
+          {choices.optionItems.map((option,index) => (
             <button
               key={option.optionIdentifier}
               onClick={() => handleOptionClick(option.optionIdentifier)}
               className="optionButton"
             >
+              {choices.images[index] && (
+                <img src={choices.images[index].url} alt={`Option ${index + 1}`} className="optionImage" />
+              )}
               {option.titleItem.title}
             </button>
           ))}
