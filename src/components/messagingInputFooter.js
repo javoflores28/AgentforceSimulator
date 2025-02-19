@@ -1,11 +1,12 @@
 import { useState } from 'react';
 
 import "./messagingInputFooter.css";
-import { VscSend } from "react-icons/vsc";
+import { VscSend, VscMic } from "react-icons/vsc";
 import CountdownTimer from "../helpers/countdownTimer";
 import { util } from "../helpers/common";
 import { CONVERSATION_CONSTANTS, CLIENT_CONSTANTS } from '../helpers/constants';
 import { getConversationId } from '../services/dataProvider';
+import { useSpeechRecognition } from '../components/useSpeechRecognition';
 
 export default function MessagingInputFooter(props) {
     // Initialize the Textarea value to empty.
@@ -14,6 +15,15 @@ export default function MessagingInputFooter(props) {
     // Initialize whether end user is actively typing. 
     // This holds a reference to a CountdownTimer object.
     let [typingIndicatorTimer, setTypingIndicatorTimer] = useState(undefined);
+
+    const { isListening, isSupported, toggleListening } = useSpeechRecognition({
+			onTranscript: setTextareaContent,
+			onFinalTranscript: () => {
+				if (textareaContent.trim()) {
+					handleSendMessage();
+				}
+			},
+		});
 
     /**
      * Handle 'change' event in Textarea to reactively update the Textarea value.
@@ -121,33 +131,44 @@ export default function MessagingInputFooter(props) {
      * Handle calling a sendTypingIndicator when the timer fires with started/stopped indicator.
      * @param {string} typingIndicator - whether to send a typing started or stopped indicator.
      */
-        function handleSendTypingIndicator(typingIndicator) {
-            const conversationId = getConversationId();
-    
-            props.sendTypingIndicator(conversationId, typingIndicator)
-            .then(() => {
-                console.log(`Successfully sent ${typingIndicator} to conversation: ${conversationId}`);
-            })
-            .catch(error => {
-                console.error(`Something went wrong while sending a typing indicator to conversation ${conversationId}: ${error}`);
-            });
-        }
+    function handleSendTypingIndicator(typingIndicator) {
+        const conversationId = getConversationId();
 
-    return(
-        <div className="messagingFooter">
-            <textarea className="messagingInputTextarea" 
-                placeholder="Type to send a message"
-                value={textareaContent}
-                onChange={handleTextareaContentChange}
-                onKeyDown={handleTextareaKeyChange}
-                onClick={handleTextareaClick}
-                disabled={shouldDisableTextarea()} />
-        
-            <button className="sendButton"
-                onClick={handleSendButtonClick}
-                disabled={shouldDisableSendButton()}>
-                <VscSend className="sendButtonIcon" />
-            </button>
-        </div>
-    );
+        props.sendTypingIndicator(conversationId, typingIndicator)
+        .then(() => {
+            console.log(`Successfully sent ${typingIndicator} to conversation: ${conversationId}`);
+        })
+        .catch(error => {
+            console.error(`Something went wrong while sending a typing indicator to conversation ${conversationId}: ${error}`);
+        });
+    }
+
+    return (
+			<div className="messagingFooter">
+				<button
+					className="sendButton"
+					onClick={toggleListening}
+					disabled={!isSupported}
+				>
+					<VscMic className="sendButtonIcon" />
+				</button>
+				<textarea
+					className="messagingInputTextarea"
+					placeholder="Type to send a message"
+					value={textareaContent}
+					onChange={handleTextareaContentChange}
+					onKeyDown={handleTextareaKeyChange}
+					onClick={handleTextareaClick}
+					disabled={shouldDisableTextarea()}
+				/>
+
+				<button
+					className="sendButton"
+					onClick={handleSendButtonClick}
+					disabled={shouldDisableSendButton()}
+				>
+					<VscSend className="sendButtonIcon" />
+				</button>
+			</div>
+		);
 }
